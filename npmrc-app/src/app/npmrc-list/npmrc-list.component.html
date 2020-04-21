@@ -1,0 +1,25 @@
+<h3>NPMRC Configurations List</h3>
+
+<table border="1" style="border-color: blue;width:80%">
+
+    <tr>
+        <th>Key</th>
+        <th> Value</th>
+        <th>Option</th>
+        
+    </tr>
+    <tr *ngFor="let config of npmrcConfigs">
+        <td>{{config[0]}}</td>
+        <td>{{config[1]}}</td>
+        <td style="width: 20%;text-align: center;">
+            
+            <nav><a  (click)="editConfig(config[0],config[1])" routerLinkActive="active">Edit</a></nav>
+        
+          <nav>  <a (click)="ConfirmationMessage(config[0])" routerLinkActive="active">Delete</a> </nav>
+        
+        </td> 
+    
+        
+    </tr> 
+    
+</table>
