@@ -9,10 +9,14 @@ const routes: Routes = [
   {
     path:"viewConfigurations",component:NpmrcListComponent
     
-  }/*,
+  },
+  
   {
-    path:"",component:NpmrcListComponent
-  } */,
+    path: '',
+    redirectTo: "/viewConfigurations",
+    pathMatch: 'full'
+    //path:" ",component:NpmrcListComponent
+  } ,
   {
     path:"addConfig",component:AddNpmrcConfigComponent
   },
