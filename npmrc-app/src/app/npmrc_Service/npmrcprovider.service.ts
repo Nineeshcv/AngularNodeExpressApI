@@ -21,9 +21,9 @@ export class NpmrcproviderService {
     return this.http.get<NpmrcConfig[]>(this.npmrcConfigAPI);
   }
 
-  delteConfigurations( key):Observable<NpmrcConfig[]>{
-    this.key= key;
-    return this.http.delete<NpmrcConfig[]>(this.npmrcConfigAPI+"/?key="+key);
+  delteConfigurations( keyValue):Observable<NpmrcConfig[]>{
+    this.key= keyValue;
+    return this.http.delete<NpmrcConfig[]>(this.npmrcConfigAPI+"/?key="+this.key);
     //this.http.delete()
   }
 

@@ -20,13 +20,13 @@ export class NpmrcListComponent implements OnInit {
     .subscribe(data=>this.npmrcConfigs=data);
   }
 
-  ConfirmationMessage(value){
+  ConfirmationMessage(key){
     if(confirm("Do you want to Delete this Entry?")){
       // Delte the item
-      console.log(value);
+      console.log(key);
       // Navigate to Delete page
 
-      this._npmrcService.delteConfigurations(value).subscribe(data=>this.npmrcConfigs=data);
+      this._npmrcService.delteConfigurations(key).subscribe(data=>this.npmrcConfigs=data);
       console.log("The code exec");
     }else{
       // Not Delete the item
