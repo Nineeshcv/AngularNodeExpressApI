@@ -13,7 +13,7 @@ export class NpmrcproviderService {
   public key;
   public value;
 
-  public npmrcConfigAPI ="http://localhost:8000/npmrc/config";
+  public npmrcConfigAPI ="http://localhost:3001/npmrc/config";
 
   
 
